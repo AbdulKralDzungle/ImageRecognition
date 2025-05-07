@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         Pane pane = new Pane();
         Rectangle rectangle = new Rectangle();
-        Scene scene1 = new Scene(pane, 300, 300);
+        Scene scene1 = new Scene(pane, 320, 320);
         stage.setScene(scene1);
         stage.setResizable(false);
         stage.show();
