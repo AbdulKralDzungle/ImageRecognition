@@ -24,6 +24,11 @@ public class HelloApplication extends Application {
         stage.setTitle("Ban Dlazek");
         Pane pane = new Pane();
 
+        Button restartBt = new Button("Restart");
+        restartBt.setScaleX(1);
+        restartBt.setScaleY(1);
+        restartBt.setLayoutY(320);
+
 
         Rectangle[][] rectangle = new Rectangle[28][28];
         for (int i = 0; i < gridSize; i++) {
@@ -39,9 +44,11 @@ public class HelloApplication extends Application {
             }
         }
 
-        Scene scene1 = new Scene(pane, 320, 320);
+        Scene scene1 = new Scene(pane, 320, 400);
         stage.setScene(scene1);
         stage.setResizable(false);
+
+        pane.getChildren().add(restartBt);
 
         pane.setOnMouseDragged(pavel -> {
             Point pointerLocation = MouseInfo.getPointerInfo().getLocation();
@@ -62,7 +69,7 @@ public class HelloApplication extends Application {
             y--;
             try {
                 rectangle[x][y].setFill(Color.WHITE);
-            } catch (Exception _ ){
+            } catch (Exception _) {
 
             }
 

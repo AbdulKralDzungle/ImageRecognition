@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="Ono to funguje&#10;YESSSS">
       <change beforePath="$PROJECT_DIR$/src/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +81,24 @@
       <option name="presentableId" value="Default" />
       <updated>1746607572695</updated>
       <workItem from="1746607573767" duration="755000" />
-      <workItem from="1747211240601" duration="4551000" />
+      <workItem from="1747211240601" duration="5042000" />
     </task>
+    <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
+      <option name="closed" value="true" />
+      <created>1747215942309</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747215942309</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ono to funguje&#10;YESSSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ono to funguje&#10;YESSSS" />
   </component>
 </project>
