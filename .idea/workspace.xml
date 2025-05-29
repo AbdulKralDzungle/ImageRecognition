@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="Ono to funguje&#10;YESSSS">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/HiddenLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +102,12 @@
       <workItem from="1748530288183" duration="2264000" />
       <workItem from="1748532579187" duration="199000" />
       <workItem from="1748532787566" duration="613000" />
+      <workItem from="1748533830267" duration="136000" />
+      <workItem from="1748533984817" duration="66000" />
+      <workItem from="1748534065266" duration="14000" />
+      <workItem from="1748534091825" duration="631000" />
+      <workItem from="1748535082550" duration="21000" />
+      <workItem from="1748535129292" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -111,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747215942309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="zacatek">
+      <option name="closed" value="true" />
+      <created>1748533872769</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748533872769</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +133,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ono to funguje&#10;YESSSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ono to funguje&#10;YESSSS" />
+    <MESSAGE value="zacatek" />
+    <option name="LAST_COMMIT_MESSAGE" value="zacatek" />
   </component>
 </project>
