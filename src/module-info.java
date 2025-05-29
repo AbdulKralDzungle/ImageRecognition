@@ -4,4 +4,5 @@ module main {
 
 
     exports main;
+    exports main.network;
 }

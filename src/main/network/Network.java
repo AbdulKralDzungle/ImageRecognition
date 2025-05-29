@@ -1,4 +1,4 @@
-package main;
+package main.network;
 
 public class Network {
     HiddenLayer[] layers;
