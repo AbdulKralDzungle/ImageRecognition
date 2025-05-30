@@ -56,14 +56,12 @@ public class Ui extends Application {
             Point pointerLocation = MouseInfo.getPointerInfo().getLocation();
 
             int sceneX = pointerLocation.x;
-            sceneX -= pane.getScene().getWindow().getX();
-            sceneX -= pane.getScene().getX();
+            sceneX -= (int) pane.getScene().getWindow().getX();
+            sceneX -= (int) pane.getScene().getX();
 
             int sceneY = pointerLocation.y;
-            sceneY -= pane.getScene().getWindow().getY();
-            sceneY -= pane.getScene().getY();
-            System.out.println(sceneX);
-            System.out.println(sceneY);
+            sceneY -= (int) pane.getScene().getWindow().getY();
+            sceneY -= (int) pane.getScene().getY();
 
             int x = (int) Math.floor((double) sceneX / (cellSize + 1));
             int y = (int) Math.floor((double) sceneY / (cellSize + 1));
