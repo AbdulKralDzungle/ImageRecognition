@@ -47,9 +47,7 @@ public class NetworkThred implements Runnable {
 
     @Override
     public void run() {
-        while (!command.exit()) {
-            command = commands.get(commandText);
-            command.execute();
-        }
+        command = commands.get(commandText);
+        command.execute();
     }
 }

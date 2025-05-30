@@ -7,6 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import main.controol.NetworkThred;
 
 import java.awt.*;
 
@@ -18,15 +19,16 @@ public class HelloApplication extends Application {
     private final int gridSize = 28;
     private final int cellSize = 10;
     private Pane pane;
+    private Thread thread;
 
     public static void main(String[] args) {
         launch(args);
-
-        //Ui ui = new Ui();
     }
 
+    //---------------------------------------------------------------------------------------------
     private void initialize() {
-
+        NetworkThred network = new NetworkThred();
+        thread = new Thread(network);
         grid = new int[28][28];
         rectangle = new Rectangle[28][28];
         pane = new Pane();
@@ -68,11 +70,15 @@ public class HelloApplication extends Application {
             try {
                 rectangle[x][y].setFill(javafx.scene.paint.Color.WHITE);
                 grid[x][y] = 256;
+                thread.start();
             } catch (Exception _) {
 
             }
 
         });
+
+        //----------------------------------
+
         restartBt.setOnAction(e -> {
             grid = new int[28][28];
             for (int i = 0; i < gridSize; i++) {

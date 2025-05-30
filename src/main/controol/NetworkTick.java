@@ -6,8 +6,4 @@ public class NetworkTick extends Command {
 
     }
 
-    @Override
-    public boolean exit() {
-        return false;
-    }
 }

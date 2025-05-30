@@ -6,8 +6,4 @@ public class TrainNetwork extends Command {
 
     }
 
-    @Override
-    public boolean exit() {
-        return false;
-    }
 }
