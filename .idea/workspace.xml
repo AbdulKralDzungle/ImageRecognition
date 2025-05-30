@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HiddenLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/HiddenLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Neuron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/network/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Neuron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,8 @@
       <workItem from="1748535129292" duration="24000" />
       <workItem from="1748535166842" duration="1292000" />
       <workItem from="1748537159112" duration="277000" />
-      <workItem from="1748537456903" duration="422000" />
+      <workItem from="1748537456903" duration="2856000" />
+      <workItem from="1748588252126" duration="4968000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748535280615</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Project Structure setup(design pattern)">
+      <option name="closed" value="true" />
+      <created>1748539111432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748539111432</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
     <MESSAGE value="Ono to funguje&#10;YESSSS" />
     <MESSAGE value="zacatek" />
     <MESSAGE value="Added neural network(form previous project)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added neural network(form previous project)" />
+    <MESSAGE value="Project Structure setup(design pattern)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Structure setup(design pattern)" />
   </component>
 </project>

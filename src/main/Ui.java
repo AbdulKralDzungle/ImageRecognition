@@ -12,36 +12,31 @@ import java.awt.*;
 
 public class Ui extends Application {
     private int[][] grid;
+    private Rectangle[][] rectangle;
+    private Scene scene1;
+    private Button restartBt;
+    private final int gridSize = 28;
+    private final int cellSize = 10;
+    private Pane pane;
 
     public Ui() {
 
+        initialize();
+        addActions();
     }
 
     private void initialize() {
+
         grid = new int[28][28];
-        for (int[] row : grid) {
-            for (int col : row) {
-                col = 0;
-            }
-        }
-    }
+        rectangle = new Rectangle[28][28];
+        pane = new Pane();
+        scene1 = new Scene(pane, 320, 400);
+        restartBt = new Button("Restart");
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        int gridSize = 28;
-        int cellSize = 10;
-
-
-        stage.setTitle("Ban Dlazek");
-        Pane pane = new Pane();
-
-        Button restartBt = new Button("Restart");
         restartBt.setScaleX(1);
         restartBt.setScaleY(1);
         restartBt.setLayoutY(320);
 
-
-        Rectangle[][] rectangle = new Rectangle[28][28];
         for (int i = 0; i < gridSize; i++) {
             for (int j = 0; j < gridSize; j++) {
                 Rectangle r = new Rectangle();
@@ -54,14 +49,10 @@ public class Ui extends Application {
                 pane.getChildren().add(rectangle[i][j]);
             }
         }
+    }
 
-        Scene scene1 = new Scene(pane, 320, 400);
-        stage.setScene(scene1);
-        stage.setResizable(false);
-
-        pane.getChildren().add(restartBt);
-
-        pane.setOnMouseDragged(pavel -> {
+    private void addActions() {
+        pane.setOnMouseDragged(e -> {
             Point pointerLocation = MouseInfo.getPointerInfo().getLocation();
 
             int sceneX = pointerLocation.x;
@@ -78,13 +69,30 @@ public class Ui extends Application {
             int y = (int) Math.floor((double) sceneY / (cellSize + 1));
             try {
                 rectangle[x][y].setFill(Color.WHITE);
+                grid[x][y] = 256;
             } catch (Exception _) {
 
             }
 
         });
+        restartBt.setOnAction(e -> {
+            grid = new int[28][28];
+            for (int i = 0; i < gridSize; i++) {
+                for (int j = 0; j < gridSize; j++) {
+                    rectangle[i][j].setFill(Color.BLACK);
+                }
+            }
+        });
+    }
 
-
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage.setTitle("Ban Dlazek");
+        stage.setScene(scene1);
+        stage.setResizable(false);
+        //------------------------------------
+        pane.getChildren().add(restartBt);
         stage.show();
+        //------------------------------------
     }
 }

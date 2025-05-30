@@ -14,9 +14,10 @@ public class NetworkThred implements Runnable {
     private void initialize() {
         commands = new HashMap<>();
         commands.put("train", new TrainNetwork());
-        commands.put("tick", new TrainNetwork());
+        commands.put("tick", new NetworkTick());
         commands.put("load", new TrainNetwork());
         commands.put("sleep", new TrainNetwork());
+        commands.put("save", new TrainNetwork());
         command = new NetworkTick();
     }
 

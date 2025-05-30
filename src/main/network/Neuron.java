@@ -38,7 +38,7 @@ public class Neuron {
         throw new RuntimeException("not matching staff " + input.length + " input " + conectionCount + " conections " + layer);
     }
 
-    private double sigmoid(double x) {
+    private static double sigmoid(double x) {
         double y;
         y = 1 / (1 + Math.exp(-x));
         return y;
