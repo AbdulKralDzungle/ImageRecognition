@@ -8,10 +8,9 @@ public class NetworkTick extends Command {
     private int answer;
 
     @Override
-    public void execute(Network network, DataReader dataReader, String token, double[] input) {
+    public Network execute(Network network, DataReader dataReader, String token, double[] input) {
         answer = network.answer(input);
-        //System.out.println(input[0]);
-        //System.out.println("Answer: " + answer);
+        return network;
     }
 
     @Override

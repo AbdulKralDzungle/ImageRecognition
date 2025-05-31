@@ -1,8 +1,9 @@
 package main.network;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Neuron {
+public class Neuron implements Serializable {
     private double[] conections;
     private int layer;
     private double[] lastInput;

@@ -1,14 +1,15 @@
 package main.network;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class HiddenLayer {
-    private Neuron[] neurons;
+public class HiddenLeyer implements Serializable {
+    private final Neuron[] neurons;
     private double learningRate;
-    private Random rn;
-    private int inputSize;
+    private final Random rn;
+    private final int inputSize;
 
-    public HiddenLayer(int neuronCount, double learningRate, int inputLenght, int layer) {
+    public HiddenLeyer(int neuronCount, double learningRate, int inputLenght, int layer) {
         neurons = new Neuron[neuronCount];
         this.learningRate = learningRate;
         this.inputSize = inputLenght;

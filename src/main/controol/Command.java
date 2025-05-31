@@ -4,7 +4,7 @@ import main.network.DataReader;
 import main.network.Network;
 
 public abstract class Command {
-    public abstract void execute(Network network, DataReader dataReader, String token, double[] input) throws Exception;
+    public abstract Network execute(Network network, DataReader dataReader, String token, double[] input) throws Exception;
 
     public abstract String output();
 

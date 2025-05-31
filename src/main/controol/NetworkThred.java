@@ -79,9 +79,9 @@ public class NetworkThred implements Runnable {
         while (!command.exit()) {
             command = commands.get(commandText);
             try {
-                command.execute(nt, reader, specification, input);
+                nt = command.execute(nt, reader, specification, input);
                 output = command.output();
-                if(command.nextState().length() > 1) {
+                if (command.nextState().length() > 1) {
                     commandText = command.nextState();
                 }
             } catch (Exception e) {

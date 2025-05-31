@@ -9,7 +9,8 @@ public class TrainNetwork extends Command {
     private String output;
 
     @Override
-    public void execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
+    public Network execute(Network nt, DataReader dataReader, String token, double[] input) throws Exception {
+        Network network = nt;
         dataReader = new DataReader(token);
         learningRate = 0.5;
 
@@ -40,6 +41,7 @@ public class TrainNetwork extends Command {
         } while (input != null);
         output = (temp / i) * 100 + "%";
         System.out.println(output);
+        return network;
     }
 
     @Override

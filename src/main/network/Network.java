@@ -1,15 +1,17 @@
 package main.network;
 
-public class Network {
-    HiddenLayer[] layers;
+import java.io.*;
+
+public class Network implements Serializable {
+    HiddenLeyer[] layers;
 
     public Network(int neuronCount, int inputSize, double learningRate, int layerCount, int outputSize) {
-        this.layers = new HiddenLayer[layerCount];
-        this.layers[0] = new HiddenLayer(neuronCount, learningRate, inputSize, 0);
+        this.layers = new HiddenLeyer[layerCount];
+        this.layers[0] = new HiddenLeyer(neuronCount, learningRate, inputSize, 0);
         for (int i = 1; i < layerCount - 1; i++) {
-            this.layers[i] = new HiddenLayer(neuronCount, learningRate, neuronCount, i);
+            this.layers[i] = new HiddenLeyer(neuronCount, learningRate, neuronCount, i);
         }
-        layers[layers.length - 1] = new HiddenLayer(outputSize, learningRate, neuronCount, layerCount - 1);
+        layers[layers.length - 1] = new HiddenLeyer(outputSize, learningRate, neuronCount, layerCount - 1);
     }
 
     public double[] forwardfeed(double[] input) {
@@ -68,8 +70,31 @@ public class Network {
     }
 
     public void setLearningRate(double learningRate) {
-        for (HiddenLayer layer : layers) {
+        for (HiddenLeyer layer : layers) {
             layer.setLearningRate(learningRate);
+        }
+    }
+
+    public void writeToFile(String fileName) throws IOException {
+        makeFile(fileName);
+        ObjectOutputStream stream = new ObjectOutputStream(
+                new FileOutputStream(fileName)
+        );
+        stream.writeObject(this);
+        stream.close();
+    }
+
+    public void makeFile(String fileName) throws IOException {
+        try {
+            File myObj = new File("filename.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
         }
     }
 
