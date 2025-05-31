@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="deserialization">
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/32.800000000000004" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/46_goat" afterDir="false" />
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/30.9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/47.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/47.9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controol/NetworkStop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controol/loadCommand/GetByName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controol/loadCommand/LoadCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleModels/30.599999999999998" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleModels/46_goat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExampleModels/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExampleModels/32.800000000000004" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExampleModels/46_goat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Network.java" afterDir="false" />
     </list>
@@ -54,6 +63,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2wlE4aezJZoCdakq97uCYlKrPuW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -171,6 +183,15 @@
       <workItem from="1748701408210" duration="57000" />
       <workItem from="1748701602935" duration="9000" />
       <workItem from="1748701725967" duration="150000" />
+      <workItem from="1748701938170" duration="57000" />
+      <workItem from="1748702003504" duration="9000" />
+      <workItem from="1748702130729" duration="97000" />
+      <workItem from="1748702269159" duration="14000" />
+      <workItem from="1748702403073" duration="794000" />
+      <workItem from="1748703317208" duration="538000" />
+      <workItem from="1748703870097" duration="5000" />
+      <workItem from="1748703884821" duration="916000" />
+      <workItem from="1748705214418" duration="1321000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -324,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748699841439</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="deserialization 2">
+      <option name="closed" value="true" />
+      <created>1748701987391</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1748701987391</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +387,7 @@
     <MESSAGE value="file changes 2" />
     <MESSAGE value="serializace, dalsi pokus" />
     <MESSAGE value="deserialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="deserialization" />
+    <MESSAGE value="deserialization 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="deserialization 2" />
   </component>
 </project>

@@ -3,14 +3,9 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
-public class SaveNetwork extends Command {
-    private double percentage;
-    private double time;
-
+public class NetworkStop extends Command {
     @Override
     public Network execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
-        String filename = token + "_" + percentage + "_" + time;
-        network.writeToFile(filename);
         return network;
     }
 
@@ -21,11 +16,11 @@ public class SaveNetwork extends Command {
 
     @Override
     public boolean exit() {
-        return false;
+        return true;
     }
 
     @Override
     public String nextState() {
-        return "tick";
+        return "";
     }
 }

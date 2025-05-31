@@ -10,6 +10,7 @@ public class NetworkThred implements Runnable {
     private String filePath;
     private double[] input;
     private String output;
+    private boolean done;
     private String specification;
     private HashMap<String, Command> commands;
     private String commandText;
@@ -25,16 +26,44 @@ public class NetworkThred implements Runnable {
         initialize();
     }
 
-    public void setInput(int[][] input) {
+    public void setInput(double[][] input) {
+        double[][] newInput = rearangeinput(input);
         this.input = new double[784];
         int i = 0;
-        for (int[] j : input) {
-            for (int k : j) {
+        for (double[] j : newInput) {
+            for (double k : j) {
                 this.input[i] = k;
                 i++;
             }
         }
 
+    }
+
+
+    private static double[][] rearangeinput(double[][] input) {
+        double[][] newInput = new double[28][28];
+
+        for (int i = 0; i < 28; i++) {
+            for (int j = 0; j < 28; j++) {
+                try {
+                    double temp = input[i][j];
+                    temp += input[j - 1][i];
+                    temp += input[j - 1][i + 1];
+                    temp += input[j - 1][i - 1];
+                    temp += input[j + 1][i];
+                    temp += input[j + 1][i + 1];
+                    temp += input[j + 1][i - 1];
+                    temp += input[j][i + 1];
+                    temp += input[j][i - 1];
+                    newInput[i][j] = temp;
+                    newInput[i][j] = newInput[i][j] / 5;
+                } catch (Exception e) {
+                    //ignoruj
+                }
+
+            }
+        }
+        return newInput;
     }
 
     private void initialize() {
@@ -49,6 +78,7 @@ public class NetworkThred implements Runnable {
         commands.put("tick", new NetworkTick());
         commands.put("load", new NetworkLoad());
         commands.put("save", new SaveNetwork());
+        commands.put("stop", new NetworkStop());
         command = new NetworkTick();
         //---------------------------------------------------
         try {
@@ -73,8 +103,13 @@ public class NetworkThred implements Runnable {
     }
 
 
+    public boolean isDone() {
+        return done;
+    }
+
     @Override
     public void run() {
+        done = false;
         while (!command.exit()) {
             command = commands.get(commandText);
             try {
@@ -85,9 +120,8 @@ public class NetworkThred implements Runnable {
                 }
             } catch (Exception e) {
                 output = e.getMessage();
-                System.out.println(e.getMessage());
             }
-
         }
+        done = true;
     }
 }

@@ -13,7 +13,7 @@ import main.controol.NetworkThred;
 import java.awt.*;
 
 public class Ui {
-    private int[][] grid;
+    private double[][] grid;
     private javafx.scene.control.TextField input;
     private Rectangle[][] rectangle;
     private Scene scene1;
@@ -40,7 +40,7 @@ public class Ui {
     private void initialize() {
         networkThred = new NetworkThred();
         thread = new Thread(networkThred);
-        grid = new int[28][28];
+        grid = new double[28][28];
         rectangle = new Rectangle[28][28];
 
         text = new Text();
@@ -114,7 +114,7 @@ public class Ui {
         //----------------------------------
 
         restartBt.setOnAction(e -> {
-            grid = new int[28][28];
+            grid = new double[28][28];
             for (int i = 0; i < gridSize; i++) {
                 for (int j = 0; j < gridSize; j++) {
                     rectangle[i][j].setFill(Color.BLACK);
@@ -125,6 +125,13 @@ public class Ui {
                 text.setText(String.valueOf(networkThred.getOutput()));
             }
 
+        });
+        pane.setOnMouseMoved(e -> {
+            if(networkThred.isDone()){
+            }
+        });
+        scene1.setOnDragExited(e -> {
+            thread.interrupt();
         });
 
         comandButton.setOnAction(e -> {
