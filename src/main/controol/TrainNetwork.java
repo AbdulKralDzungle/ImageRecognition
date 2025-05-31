@@ -11,7 +11,7 @@ public class TrainNetwork extends Command {
     @Override
     public void execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
         dataReader = new DataReader(token);
-        learningRate = 0.2;
+        learningRate = 0.5;
 
 
         for (int i = 0; i < 10; i++) {
@@ -20,12 +20,18 @@ public class TrainNetwork extends Command {
                 network.bProp(dataReader.getLabel(), input.clone());
                 input = dataReader.read();
             } while (input != null);
+            learningRate = learningRate * 0.9;
+            network.setLearningRate(learningRate);
             dataReader.reset();
+            System.out.println("training " + i * 10 + "% finished");
         }
-        int temp = 0;
+        double temp = 0;
         int i = 0;
         input = dataReader.read();
         do {
+            System.out.println(network.answer(input));
+            System.out.println(dataReader.getLabel());
+            System.out.println();
             if (network.answer(input) == dataReader.getLabel()) {
                 temp++;
             }

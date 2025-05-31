@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="Training process">
+      <change afterPath="$PROJECT_DIR$/ExampleModels/46_goat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Ui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/DataReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\ExampleModels" />
       <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha" />
+      <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\LittleData" />
       <recent name="C:\Users\smekal\IdeaProjects\PavelToTaha\src" />
     </key>
   </component>
@@ -147,6 +146,14 @@
       <workItem from="1748685084846" duration="109000" />
       <workItem from="1748685200294" duration="91000" />
       <workItem from="1748685308392" duration="557000" />
+      <workItem from="1748685935349" duration="1715000" />
+      <workItem from="1748687675034" duration="327000" />
+      <workItem from="1748688361232" duration="1493000" />
+      <workItem from="1748694473000" duration="122000" />
+      <workItem from="1748694935683" duration="137000" />
+      <workItem from="1748695085429" duration="93000" />
+      <workItem from="1748695328192" duration="28000" />
+      <workItem from="1748695406872" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -228,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748679094433</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="training sistem(not working)">
+      <option name="closed" value="true" />
+      <created>1748686064542</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748686064542</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +259,8 @@
     <MESSAGE value="Added threads" />
     <MESSAGE value="Atempt on connecting FNN to ui" />
     <MESSAGE value="Input + nwtwork linked to ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input + nwtwork linked to ui" />
+    <MESSAGE value="training sistem(not working)" />
+    <MESSAGE value="Training process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Training process" />
   </component>
 </project>

@@ -10,6 +10,7 @@ public class NetworkTick extends Command {
     @Override
     public void execute(Network network, DataReader dataReader, String token, double[] input) {
         answer = network.answer(input);
+        //System.out.println(input[0]);
         //System.out.println("Answer: " + answer);
     }
 

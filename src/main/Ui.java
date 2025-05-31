@@ -101,10 +101,8 @@ public class Ui {
             int y = (int) Math.floor((double) sceneY / (cellSize + 1));
             try {
                 rectangle[x][y].setFill(javafx.scene.paint.Color.WHITE);
-                grid[x][y] = 256;
-                if (!thread.isAlive()) {
-                    networkThred.setInput(grid);
-                }
+                grid[x][y] = 1;
+                networkThred.setInput(grid);
                 text.setText(String.valueOf(networkThred.getOutput()));
 
             } catch (Exception _) {
