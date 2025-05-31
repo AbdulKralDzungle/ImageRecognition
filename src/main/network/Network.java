@@ -15,6 +15,12 @@ public class Network implements Serializable {
         layers[layers.length - 1] = new HiddenLeyer(outputSize, learningRate, neuronCount, layerCount - 1);
     }
 
+    /**
+     * feeds input trough network
+     *
+     * @param input double[] witch is fed to first layer
+     * @return whatever the network calculated as correct output
+     */
     public double[] forwardfeed(double[] input) {
         double[] output = input.clone();
         for (int i = 0; i < this.layers.length; i++) {
@@ -23,6 +29,13 @@ public class Network implements Serializable {
         return output;
     }
 
+    /**
+     * this method calculates the 'amount of mistake' that the network does
+     *
+     * @param tag   int that contains information about the correct answer
+     * @param input is the input based on witch network is making it's gess
+     * @return 'amount of mistake' in a form of double
+     */
     public double callCost(int tag, double[] input) {
         double[] expected = new double[10];
         expected[tag] = 1;
@@ -58,6 +71,12 @@ public class Network implements Serializable {
         //layers[layers.length - 1].bProp(costs);
     }
 
+    /**
+     * this feeds input to the network, and then translates its output into single int containing its answer
+     *
+     * @param input is what will be fed to the network
+     * @return answer of the network
+     */
     public int answer(double[] input) {
         int answer = 0;
         double[] output = forwardfeed(input);
@@ -76,6 +95,7 @@ public class Network implements Serializable {
         }
     }
 
+    // traditional serialization
     public void writeToFile(String fileName) throws IOException {
         makeFile(fileName);
         ObjectOutputStream stream = new ObjectOutputStream(
@@ -85,21 +105,23 @@ public class Network implements Serializable {
         stream.close();
     }
 
-    public void makeFile(String fileName) throws IOException {
+    /**
+     * @param fileName is input name, if a file with this name does not exist, this method will create it
+     */
+    public void makeFile(String fileName) {
+        File myObj = new File(fileName);
         try {
-            File myObj = new File(fileName);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
                 System.out.println("File already exists.");
             }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
-
+    //traditional deserialization
     public static Network readFromFile(String fileName) throws IOException, ClassNotFoundException {
         ObjectInputStream stream = new ObjectInputStream(new FileInputStream(fileName));
         Network network = (Network) stream.readObject();

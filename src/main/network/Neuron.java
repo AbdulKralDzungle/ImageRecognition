@@ -23,10 +23,15 @@ public class Neuron implements Serializable {
         conections = new double[conectionCount];
         for (int i = 0; i < conectionCount; i++) {
             conections[i] = rn.nextDouble(20) - 10;
-            System.out.println(conections[i]);
         }
     }
 
+    /**
+     * this is the method that handles math calculating output
+     *
+     * @param input values that will be used to calculate output
+     * @return output of the neuron
+     */
     public double calculateOuput(double[] input) {
         lastInput = input;
         if (input.length == conectionCount) {
@@ -46,6 +51,13 @@ public class Neuron implements Serializable {
         return y;
     }
 
+    /**
+     * this changes connections and bias in the first layer of the network using chain rule
+     *
+     * @param expectedOutput is correct output used to calculate how wrong the network is
+     * @param learningRate   rate of change played to the network
+     * @return errors that will be passed to previous layer of neurons
+     */
     public double[] firstPropagate(double expectedOutput, double learningRate) {
         double cost = lastOutput - expectedOutput;
         double delta = cost * lastOutput * (1 - lastOutput);
@@ -61,6 +73,13 @@ public class Neuron implements Serializable {
         return prevLayerError;
     }
 
+    /**
+     * this changes connections and bias of the neuron using chain rule
+     *
+     * @param learningRate rate of change played to the network
+     * @param error        is error of the following layer
+     * @return errors that will be passed to previous layer of neurons
+     */
     public double[] backPropagate(double learningRate, double error) {
         double delta = error * lastOutput * (1 - lastOutput);
         for (int i = 0; i < conections.length; i++) {

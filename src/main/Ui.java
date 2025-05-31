@@ -1,5 +1,6 @@
 package main;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -25,6 +26,7 @@ public class Ui {
     private VBox vbox;
     private Thread thread;
     private Text text;
+    private Text text2;
     private NetworkThred networkThred;
 
     public Scene constructUi() {
@@ -49,6 +51,12 @@ public class Ui {
         text.setFill(Color.BLACK);
         text.setText("Hello World");
 
+        text2 = new Text();
+        text2.setX(0);
+        text2.setY(420);
+        text2.setFill(Color.BLACK);
+        text2.setText("all commands for controlling are in documentation");
+
         input = new TextField();
         vbox.getChildren().add(input);
         vbox.setLayoutY(360);
@@ -64,8 +72,9 @@ public class Ui {
         comandButton.setLayoutY(360);
         comandButton.setLayoutX(200);
 
-        scene1 = new Scene(pane, 320, 400);
+        scene1 = new Scene(pane, 320, 450);
         pane.getChildren().add(text);
+        pane.getChildren().add(text2);
         pane.getChildren().add(comandButton);
         // pane.getChildren().add(textArea);
 
@@ -85,7 +94,16 @@ public class Ui {
         thread.start();
     }
 
+    public void setExit() {
+        networkThred.setExit(true);
+    }
+
+    /**
+     * this method is to define actions of various parts of the stage
+     */
     private void addActions() {
+
+        //here is handled the the painting using cursor
         pane.setOnMouseDragged(e -> {
             Point pointerLocation = MouseInfo.getPointerInfo().getLocation();
 
@@ -112,7 +130,7 @@ public class Ui {
         });
 
         //----------------------------------
-
+        //this restarts the the black/white grid upon clicking the button
         restartBt.setOnAction(e -> {
             grid = new double[28][28];
             for (int i = 0; i < gridSize; i++) {
@@ -126,12 +144,11 @@ public class Ui {
             }
 
         });
+        //this shuts down app when the networkThread is finished
         pane.setOnMouseMoved(e -> {
-            if(networkThred.isDone()){
+            if (networkThred.isDone()) {
+                Platform.exit();
             }
-        });
-        scene1.setOnDragExited(e -> {
-            thread.interrupt();
         });
 
         comandButton.setOnAction(e -> {

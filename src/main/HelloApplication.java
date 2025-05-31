@@ -17,6 +17,8 @@ public class HelloApplication extends Application {
         stage.setScene(ui.constructUi());
         stage.setResizable(false);
         stage.show();
-
+        stage.setOnCloseRequest(event -> {
+            ui.setExit();
+        });
     }
 }

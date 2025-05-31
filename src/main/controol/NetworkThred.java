@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class NetworkThred implements Runnable {
     private String filePath;
     private double[] input;
+    private boolean exit;
     private String output;
     private boolean done;
     private String specification;
@@ -66,7 +67,11 @@ public class NetworkThred implements Runnable {
         return newInput;
     }
 
+    /**
+     * standard initialization of staff and a design pattern
+     */
     private void initialize() {
+        exit = false;
         filePath = "LittleData/MnistTiny";
         //---------------------------------------------------
         learningRate = 0.1;
@@ -79,6 +84,7 @@ public class NetworkThred implements Runnable {
         commands.put("load", new NetworkLoad());
         commands.put("save", new SaveNetwork());
         commands.put("stop", new NetworkStop());
+        commands.put("exit", new NetworkStop());
         command = new NetworkTick();
         //---------------------------------------------------
         try {
@@ -92,6 +98,12 @@ public class NetworkThred implements Runnable {
         return output;
     }
 
+    /**
+     * this method extracts command from user input
+     *
+     * @param commandText is user input
+     * @throws Exception is thrown when user uses invalid command
+     */
     public void setCommandText(String commandText) throws Exception {
         String[] commandParts = commandText.split(" ");
         commandParts[0] = commandParts[0].toLowerCase();
@@ -113,20 +125,29 @@ public class NetworkThred implements Runnable {
         return done;
     }
 
+    public void setExit(boolean exit) {
+        this.exit = exit;
+    }
+
+    /**
+     * this run method is where the command design pattern is executed
+     */
     @Override
     public void run() {
         done = false;
-        while (!command.exit()) {
+        while (!exit) {
             command = commands.get(commandText);
             try {
                 nt = command.execute(nt, reader, specification, input);
                 output = command.output();
-                if (command.nextState().length() > 1) {
+                if (!command.nextState().isEmpty()) {
                     commandText = command.nextState();
+                    command = commands.get(commandText);
                 }
             } catch (Exception e) {
                 output = e.getMessage();
             }
+            exit = command.exit();
         }
         done = true;
     }

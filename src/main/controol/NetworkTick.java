@@ -3,6 +3,9 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
+/**
+ * this class is used as a command that makes the network guess witch number is drawn by the user
+ */
 public class NetworkTick extends Command {
 
     private int answer;

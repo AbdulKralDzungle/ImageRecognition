@@ -3,6 +3,9 @@ package main.network;
 import java.io.Serializable;
 import java.util.Random;
 
+/**
+ *
+ */
 public class HiddenLeyer implements Serializable {
     private final Neuron[] neurons;
     private double learningRate;
@@ -19,6 +22,12 @@ public class HiddenLeyer implements Serializable {
         }
     }
 
+    /**
+     * this method feeds input into neurons that this layer contains
+     *
+     * @param input values fed to the neurons
+     * @return output, that will be passed to the next layer on the network
+     */
     public double[] calOut(double[] input) {
         double[] output = new double[neurons.length];
         for (int i = 0; i < neurons.length; i++) {
@@ -27,6 +36,12 @@ public class HiddenLeyer implements Serializable {
         return output;
     }
 
+    /**
+     * this changes connections and bias in the first layer of the network using chain rule
+     *
+     * @param expectedOutput is correct output used to calculate how wrong the network is
+     * @return errors that will be passed to previous layer of neurons
+     */
     public double[] firstProp(double[] expectedOutput) {
         double[] errors = new double[inputSize];
         if (neurons.length == expectedOutput.length) {
@@ -43,6 +58,12 @@ public class HiddenLeyer implements Serializable {
 
     }
 
+    /**
+     * this changes connections and bias of the neuron using chain rule
+     *
+     * @param prevErrors is error of the following layer
+     * @return errors that will be passed to the previous layer
+     */
     public double[] bProp(double[] prevErrors) {
         double[] errors = new double[inputSize];
         if (neurons.length == prevErrors.length) {

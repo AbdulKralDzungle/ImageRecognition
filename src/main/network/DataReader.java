@@ -24,6 +24,10 @@ public class DataReader {
         return label;
     }
 
+    /**
+     * @return values separated from a file
+     * @throws IOException is thrown when the reader is unable to read the next line
+     */
     public double[] read() throws IOException {
         String s = bf.readLine();
         if (s == null) {
@@ -37,6 +41,9 @@ public class DataReader {
         return data;
     }
 
+    /**
+     * this resets the reader, to make it read from the beginning of the file
+     */
     public void reset() {
         try {
             bf = new BufferedReader(new FileReader(path));

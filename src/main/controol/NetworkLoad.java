@@ -3,6 +3,9 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
+/**
+ * deserialize network from the files, and than returns it to rest of the program for it to be used
+ */
 public class NetworkLoad extends Command {
     private Network network;
     private String fileName;

@@ -3,6 +3,9 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
+/**
+ * serializes the network
+ */
 public class SaveNetwork extends Command {
     private double percentage;
     private double time;

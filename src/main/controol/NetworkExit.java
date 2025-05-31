@@ -3,14 +3,10 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
-/**
- * this class is used as a command to stop the application
- */
-public class NetworkStop extends Command {
-
+public class NetworkExit extends Command {
     @Override
     public Network execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
-        return network;
+        return null;
     }
 
     @Override

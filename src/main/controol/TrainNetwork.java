@@ -2,7 +2,9 @@ package main.controol;
 
 import main.network.DataReader;
 import main.network.Network;
-
+/**
+ * this class is used as a command that makes the network train based on data that are obtained from a file that is chosen by user
+ */
 public class TrainNetwork extends Command {
     private DataReader reader;
     private double learningRate;
@@ -13,8 +15,6 @@ public class TrainNetwork extends Command {
         Network network = nt;
         dataReader = new DataReader(token);
         learningRate = 0.5;
-
-
         for (int i = 0; i < 10; i++) {
             input = dataReader.read();
             do {
@@ -30,17 +30,16 @@ public class TrainNetwork extends Command {
         int i = 0;
         input = dataReader.read();
         do {
-            System.out.println(network.answer(input));
-            System.out.println(dataReader.getLabel());
-            System.out.println();
+
             if (network.answer(input) == dataReader.getLabel()) {
                 temp++;
             }
             input = dataReader.read();
             i++;
         } while (input != null);
-        output = (temp / i) * 100 + "%";
-        System.out.println(output);
+        dataReader.reset();
+        double[] temp2 = dataReader.read();
+        output = "network have" + (temp / i) * 100 + "% accuracy and " + nt.callCost(dataReader.getLabel(), temp2);
         return network;
     }
 
