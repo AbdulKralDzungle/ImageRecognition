@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExampleModels/30.599999999999998" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="deserialization">
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/32.800000000000004" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/46_goat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleModels/30.599999999999998" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleModels/46_goat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Neuron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +83,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\src\ExampleModels" />
+      <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\src" />
       <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\ExampleModels" />
       <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\.mvn\wrapper\maven" />
       <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\ExampleModels" />
-      <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha" />
-      <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\LittleData" />
     </key>
   </component>
   <component name="RunManager">
@@ -163,6 +164,13 @@
       <workItem from="1748698551313" duration="206000" />
       <workItem from="1748698774314" duration="283000" />
       <workItem from="1748699361210" duration="32000" />
+      <workItem from="1748699646128" duration="315000" />
+      <workItem from="1748699979707" duration="1000" />
+      <workItem from="1748699991974" duration="45000" />
+      <workItem from="1748700123469" duration="1252000" />
+      <workItem from="1748701408210" duration="57000" />
+      <workItem from="1748701602935" duration="9000" />
+      <workItem from="1748701725967" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -308,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748698495274</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="deserialization">
+      <option name="closed" value="true" />
+      <created>1748699841439</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1748699841439</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +357,7 @@
     <MESSAGE value="file changes" />
     <MESSAGE value="file changes 2" />
     <MESSAGE value="serializace, dalsi pokus" />
-    <option name="LAST_COMMIT_MESSAGE" value="serializace, dalsi pokus" />
+    <MESSAGE value="deserialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="deserialization" />
   </component>
 </project>

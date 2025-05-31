@@ -6,7 +6,7 @@ import main.network.Network;
 public class SaveNetwork extends Command {
     @Override
     public Network execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
-        network.makeFile(token);
+        network.writeToFile(token);
         return network;
     }
 

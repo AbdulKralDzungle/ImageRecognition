@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Network implements Serializable {
     HiddenLeyer[] layers;
+    private static final long serialVesionUID = 1L;
 
     public Network(int neuronCount, int inputSize, double learningRate, int layerCount, int outputSize) {
         this.layers = new HiddenLeyer[layerCount];
@@ -23,9 +24,9 @@ public class Network implements Serializable {
     }
 
     public double callCost(int tag, double[] input) {
-        double[] expected = new double[10];
+        double[] expected = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         expected[tag] = 1;
-        double[] cost = new double[10];
+        double[] cost = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         for (int i = 0; i < input.length; i++) {
             cost[i] = input[i] - expected[i];
         }
@@ -86,7 +87,7 @@ public class Network implements Serializable {
 
     public void makeFile(String fileName) throws IOException {
         try {
-            File myObj = new File("filename.txt");
+            File myObj = new File(fileName);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -98,11 +99,11 @@ public class Network implements Serializable {
         }
     }
 
-    public static Network readFromFile(String fileName) throws
-            IOException, ClassNotFoundException {
-        ObjectInputStream stream = new ObjectInputStream(new
-                FileInputStream(fileName));
-        return (Network) stream.readObject();
+
+    public static Network readFromFile(String fileName) throws IOException, ClassNotFoundException {
+        ObjectInputStream stream = new ObjectInputStream(new FileInputStream(fileName));
+        Network network = (Network) stream.readObject();
+        return network;
     }
 
 
