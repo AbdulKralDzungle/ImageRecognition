@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExampleModels/30.599999999999998" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/HiddenLayer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/network/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Neuron.java" afterDir="false" />
     </list>
@@ -36,9 +33,6 @@
     &quot;assignee&quot;: &quot;DamianSmekal&quot;
   }
 }</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="0a59de9c-ec6e-4e24-80ad-8a60e28b2028" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DamianSmekal/PavelToTaha.git&quot;,
@@ -88,11 +82,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\ExampleModels" />
       <recent name="C:\Users\damia\OneDrive\Plocha\ImageRecognition\.mvn\wrapper\maven" />
       <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\ExampleModels" />
       <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha" />
       <recent name="C:\Users\damia\OneDrive\Plocha\PavelToTaha\LittleData" />
-      <recent name="C:\Users\smekal\IdeaProjects\PavelToTaha\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,6 +159,10 @@
       <workItem from="1748698279177" duration="29000" />
       <workItem from="1748698354459" duration="71000" />
       <workItem from="1748698432878" duration="7000" />
+      <workItem from="1748698450786" duration="87000" />
+      <workItem from="1748698551313" duration="206000" />
+      <workItem from="1748698774314" duration="283000" />
+      <workItem from="1748699361210" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -302,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748697101850</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="serializace, dalsi pokus">
+      <option name="closed" value="true" />
+      <created>1748698495274</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1748698495274</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +340,7 @@
     <MESSAGE value="serialization" />
     <MESSAGE value="file changes" />
     <MESSAGE value="file changes 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="file changes 2" />
+    <MESSAGE value="serializace, dalsi pokus" />
+    <option name="LAST_COMMIT_MESSAGE" value="serializace, dalsi pokus" />
   </component>
 </project>

@@ -39,7 +39,7 @@ public class Neuron implements Serializable {
         throw new RuntimeException("not matching staff " + input.length + " input " + conectionCount + " conections " + layer);
     }
 
-    private static double sigmoid(double x) {
+    private double sigmoid(double x) {
         double y;
         y = 1 / (1 + Math.exp(-x));
         return y;

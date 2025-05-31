@@ -23,9 +23,9 @@ public class Network implements Serializable {
     }
 
     public double callCost(int tag, double[] input) {
-        double[] expected = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        double[] expected = new double[10];
         expected[tag] = 1;
-        double[] cost = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        double[] cost = new double[10];
         for (int i = 0; i < input.length; i++) {
             cost[i] = input[i] - expected[i];
         }
@@ -96,6 +96,13 @@ public class Network implements Serializable {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    public static Network readFromFile(String fileName) throws
+            IOException, ClassNotFoundException {
+        ObjectInputStream stream = new ObjectInputStream(new
+                FileInputStream(fileName));
+        return (Network) stream.readObject();
     }
 
 

@@ -3,17 +3,11 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
-public class NetworkLoad extends Command {
-    Network network;
-
+public class SaveNetwork extends Command {
     @Override
     public Network execute(Network network, DataReader dataReader, String token, double[] input) throws Exception {
-        try {
-            this.network = Network.readFromFile(token);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return this.network;
+        network.makeFile(token);
+        return network;
     }
 
     @Override
@@ -30,5 +24,4 @@ public class NetworkLoad extends Command {
     public String nextState() {
         return "tick";
     }
-
 }

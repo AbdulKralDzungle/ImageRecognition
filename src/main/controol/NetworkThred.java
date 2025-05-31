@@ -48,8 +48,7 @@ public class NetworkThred implements Runnable {
         commands.put("train", new TrainNetwork());
         commands.put("tick", new NetworkTick());
         commands.put("load", new NetworkLoad());
-        //commands.put("sleep", new TrainNetwork());
-        // commands.put("save", new TrainNetwork());
+        commands.put("save", new SaveNetwork());
         command = new NetworkTick();
         //---------------------------------------------------
         try {
