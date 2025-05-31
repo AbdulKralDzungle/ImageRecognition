@@ -1,0 +1,100 @@
+package main;
+
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
+import main.controol.NetworkThred;
+
+import java.awt.*;
+
+public class Ui {
+    private int[][] grid;
+    private Rectangle[][] rectangle;
+    private Scene scene1;
+    private Button restartBt;
+    private final int gridSize = 28;
+    private final int cellSize = 10;
+    private Pane pane;
+    private Thread thread;
+    private Text text;
+
+    public Scene constructUi() {
+        pane = new Pane();
+        initialize();
+        addActions();
+        pane.getChildren().add(restartBt);
+        return scene1;
+    }
+
+    private void initialize() {
+        NetworkThred network = new NetworkThred();
+        thread = new Thread(network);
+        grid = new int[28][28];
+        rectangle = new Rectangle[28][28];
+        text = new Text();
+        pane = new Pane();
+        scene1 = new Scene(pane, 320, 400);
+        restartBt = new Button("Restart");
+        text.setX(100);
+        text.setY(340);
+        text.setFill(Color.BLACK);
+        text.setText("Hello World");
+        pane.getChildren().add(text);
+        restartBt.setScaleX(1);
+        restartBt.setScaleY(1);
+        restartBt.setLayoutY(320);
+
+        for (int i = 0; i < gridSize; i++) {
+            for (int j = 0; j < gridSize; j++) {
+                Rectangle r = new Rectangle();
+                r.setHeight(cellSize);
+                r.setWidth(cellSize);
+                r.setX(i * (cellSize + 1));
+                r.setY(j * (cellSize + 1));
+
+                rectangle[i][j] = r;
+                pane.getChildren().add(rectangle[i][j]);
+            }
+        }
+    }
+
+    private void addActions() {
+        pane.setOnMouseDragged(e -> {
+            Point pointerLocation = MouseInfo.getPointerInfo().getLocation();
+
+            int sceneX = pointerLocation.x;
+            sceneX -= (int) pane.getScene().getWindow().getX();
+            sceneX -= (int) pane.getScene().getX();
+
+            int sceneY = pointerLocation.y;
+            sceneY -= (int) pane.getScene().getWindow().getY();
+            sceneY -= (int) pane.getScene().getY();
+
+            int x = (int) Math.floor((double) sceneX / (cellSize + 1));
+            int y = (int) Math.floor((double) sceneY / (cellSize + 1));
+            try {
+                rectangle[x][y].setFill(javafx.scene.paint.Color.WHITE);
+                grid[x][y] = 256;
+                thread.start();
+            } catch (Exception _) {
+
+            }
+
+        });
+
+        //----------------------------------
+
+        restartBt.setOnAction(e -> {
+            grid = new int[28][28];
+            for (int i = 0; i < gridSize; i++) {
+                for (int j = 0; j < gridSize; j++) {
+                    rectangle[i][j].setFill(Color.BLACK);
+                }
+            }
+        });
+    }
+
+}

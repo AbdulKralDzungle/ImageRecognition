@@ -3,8 +3,7 @@ package main.controol;
 import main.network.DataReader;
 import main.network.Network;
 
-public class TrainNetwork extends Command {
-
+public class NetworkLoad extends Command {
 
     @Override
     public void execute(Network network, DataReader dataReader, String token) {

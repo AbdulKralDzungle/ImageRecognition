@@ -44,7 +44,7 @@ public class Network {
      * @param input is whatever goes to the network
      */
     public void bProp(int tag, double[] input) {
-        double[] expected = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        double[] expected = new double[10];
         expected[tag] = 1;
         this.forwardfeed(input);
         double[] errors = layers[layers.length - 1].firstProp(expected);
