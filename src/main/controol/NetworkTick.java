@@ -19,6 +19,11 @@ public class NetworkTick extends Command {
     }
 
     @Override
+    public void getExtra(String extra) {
+
+    }
+
+    @Override
     public boolean exit() {
         return false;
     }

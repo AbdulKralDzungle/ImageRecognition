@@ -8,6 +8,8 @@ public abstract class Command {
 
     public abstract String output();
 
+    public abstract void getExtra(String extra);
+
     public abstract boolean exit();
 
     public abstract String nextState();

@@ -23,6 +23,7 @@ public class Neuron implements Serializable {
         conections = new double[conectionCount];
         for (int i = 0; i < conectionCount; i++) {
             conections[i] = rn.nextDouble(20) - 10;
+            System.out.println(conections[i]);
         }
     }
 
