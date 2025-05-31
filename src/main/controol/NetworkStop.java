@@ -15,6 +15,11 @@ public class NetworkStop extends Command {
     }
 
     @Override
+    public void getExtra(String extra) {
+
+    }
+
+    @Override
     public boolean exit() {
         return true;
     }

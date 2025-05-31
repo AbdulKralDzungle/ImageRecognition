@@ -99,7 +99,13 @@ public class NetworkThred implements Runnable {
             throw new Exception(commandText + " is not a valid command");
         }
         this.commandText = commandParts[0];
-        specification = commandParts[1];
+        try {
+            specification = commandParts[1];
+        } catch (Exception e) {
+            // try / catch used instead of an if else statement
+        }
+
+
     }
 
 
