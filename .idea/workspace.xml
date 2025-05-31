@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="Atempt on connecting FNN to ui">
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Ui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/Command.java" afterDir="false" />
@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/network/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/DataReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,14 @@
       <workItem from="1748673358308" duration="397000" />
       <workItem from="1748673773988" duration="100000" />
       <workItem from="1748673917348" duration="110000" />
-      <workItem from="1748674229528" duration="4555000" />
+      <workItem from="1748674229528" duration="6538000" />
+      <workItem from="1748683005901" duration="522000" />
+      <workItem from="1748683557651" duration="434000" />
+      <workItem from="1748684011317" duration="933000" />
+      <workItem from="1748684960702" duration="105000" />
+      <workItem from="1748685084846" duration="109000" />
+      <workItem from="1748685200294" duration="91000" />
+      <workItem from="1748685308392" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -212,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748674285073</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Input + nwtwork linked to ui">
+      <option name="closed" value="true" />
+      <created>1748679094433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748679094433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +243,7 @@
     <MESSAGE value="UI cleanup(another one, java fx i weird)" />
     <MESSAGE value="Added threads" />
     <MESSAGE value="Atempt on connecting FNN to ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atempt on connecting FNN to ui" />
+    <MESSAGE value="Input + nwtwork linked to ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input + nwtwork linked to ui" />
   </component>
 </project>

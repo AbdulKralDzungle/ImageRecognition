@@ -4,9 +4,11 @@ import main.network.DataReader;
 import main.network.Network;
 
 public abstract class Command {
-    public abstract void execute(Network network, DataReader dataReader, String token, double[] input);
+    public abstract void execute(Network network, DataReader dataReader, String token, double[] input) throws Exception;
 
-    public abstract int output();
+    public abstract String output();
 
     public abstract boolean exit();
+
+    public abstract String nextState();
 }

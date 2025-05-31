@@ -9,7 +9,8 @@ import java.util.HashMap;
 public class NetworkThred implements Runnable {
     private String filePath;
     private double[] input;
-    private int output;
+    private String output;
+    private String specification;
     private HashMap<String, Command> commands;
     private String commandText;
     private double learningRate;
@@ -46,9 +47,9 @@ public class NetworkThred implements Runnable {
         commandText = "tick";
         commands.put("train", new TrainNetwork());
         commands.put("tick", new NetworkTick());
-        commands.put("load", new TrainNetwork());
-        commands.put("sleep", new TrainNetwork());
-        commands.put("save", new TrainNetwork());
+        commands.put("load", new NetworkLoad());
+        //commands.put("sleep", new TrainNetwork());
+        // commands.put("save", new TrainNetwork());
         command = new NetworkTick();
         //---------------------------------------------------
         try {
@@ -58,16 +59,36 @@ public class NetworkThred implements Runnable {
         }
     }
 
-    public int getOutput() {
+    public String getOutput() {
         return output;
     }
+
+    public void setCommandText(String commandText) throws Exception {
+        String[] commandParts = commandText.split(" ");
+        commandParts[0] = commandParts[0].toLowerCase();
+        if (!commands.containsKey(commandParts[0])) {
+            throw new Exception(commandText + " is not a valid command");
+        }
+        this.commandText = commandParts[0];
+        specification = commandParts[1];
+    }
+
 
     @Override
     public void run() {
         while (!command.exit()) {
             command = commands.get(commandText);
-            command.execute(nt, reader, "random string", input);
-            output = command.output();
+            try {
+                command.execute(nt, reader, specification, input);
+                output = command.output();
+                if(command.nextState().length() > 1) {
+                    commandText = command.nextState();
+                }
+            } catch (Exception e) {
+                output = e.getMessage();
+                System.out.println(e.getMessage());
+            }
+
         }
     }
 }

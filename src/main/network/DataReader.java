@@ -16,6 +16,7 @@ public class DataReader {
     public DataReader(String path) throws FileNotFoundException {
         data = new double[784];
         this.path = path;
+        //System.out.println("Reading data from " + path);
         bf = new BufferedReader(new FileReader(path));
     }
 
@@ -25,6 +26,9 @@ public class DataReader {
 
     public double[] read() throws IOException {
         String s = bf.readLine();
+        if (s == null) {
+            return null;
+        }
         String[] split = s.split(",");
         label = Integer.parseInt(split[0]);
         for (int i = 0; i < data.length; i++) {

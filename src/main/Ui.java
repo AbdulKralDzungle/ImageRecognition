@@ -21,6 +21,7 @@ public class Ui {
     private final int gridSize = 28;
     private final int cellSize = 10;
     private Pane pane;
+    private Button comandButton;
     private VBox vbox;
     private Thread thread;
     private Text text;
@@ -57,8 +58,15 @@ public class Ui {
         restartBt.setScaleY(1);
         restartBt.setLayoutY(320);
 
+        comandButton = new Button("submit");
+        comandButton.setScaleX(1);
+        comandButton.setScaleY(1);
+        comandButton.setLayoutY(360);
+        comandButton.setLayoutX(200);
+
         scene1 = new Scene(pane, 320, 400);
         pane.getChildren().add(text);
+        pane.getChildren().add(comandButton);
         // pane.getChildren().add(textArea);
 
         for (int i = 0; i < gridSize; i++) {
@@ -117,6 +125,15 @@ public class Ui {
             if (!thread.isAlive()) {
                 networkThred.setInput(grid);
                 text.setText(String.valueOf(networkThred.getOutput()));
+            }
+
+        });
+
+        comandButton.setOnAction(e -> {
+            try {
+                networkThred.setCommandText(input.getText());
+            } catch (Exception ex) {
+                text.setText(ex.getMessage());
             }
 
         });

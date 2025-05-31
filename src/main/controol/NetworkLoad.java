@@ -11,12 +11,17 @@ public class NetworkLoad extends Command {
     }
 
     @Override
-    public int output() {
-        return 0;
+    public String output() {
+        return "";
     }
 
     @Override
     public boolean exit() {
         return false;
+    }
+
+    @Override
+    public String nextState() {
+        return "tick";
     }
 }
