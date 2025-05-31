@@ -9,11 +9,17 @@ public class NetworkTick extends Command {
 
     @Override
     public void execute(Network network, DataReader dataReader, String token, double[] input) {
-     answer = network.answer(input)
+        answer = network.answer(input);
+        System.out.println("Answer: " + answer);
     }
 
     @Override
     public int output() {
-        return 0;
+        return answer;
+    }
+
+    @Override
+    public boolean exit() {
+        return false;
     }
 }

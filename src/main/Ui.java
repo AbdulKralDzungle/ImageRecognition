@@ -2,7 +2,9 @@ package main;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -12,40 +14,52 @@ import java.awt.*;
 
 public class Ui {
     private int[][] grid;
+    private javafx.scene.control.TextField input;
     private Rectangle[][] rectangle;
     private Scene scene1;
     private Button restartBt;
     private final int gridSize = 28;
     private final int cellSize = 10;
     private Pane pane;
+    private VBox vbox;
     private Thread thread;
     private Text text;
+    private NetworkThred networkThred;
 
     public Scene constructUi() {
         pane = new Pane();
+        vbox = new VBox();
         initialize();
         addActions();
         pane.getChildren().add(restartBt);
+        pane.getChildren().add(vbox);
         return scene1;
     }
 
     private void initialize() {
-        NetworkThred network = new NetworkThred();
-        thread = new Thread(network);
+        networkThred = new NetworkThred();
+        thread = new Thread(networkThred);
         grid = new int[28][28];
         rectangle = new Rectangle[28][28];
+
         text = new Text();
-        pane = new Pane();
-        scene1 = new Scene(pane, 320, 400);
-        restartBt = new Button("Restart");
         text.setX(100);
         text.setY(340);
         text.setFill(Color.BLACK);
         text.setText("Hello World");
-        pane.getChildren().add(text);
+
+        input = new TextField();
+        vbox.getChildren().add(input);
+        vbox.setLayoutY(360);
+
+        restartBt = new Button("Restart");
         restartBt.setScaleX(1);
         restartBt.setScaleY(1);
         restartBt.setLayoutY(320);
+
+        scene1 = new Scene(pane, 320, 400);
+        pane.getChildren().add(text);
+        // pane.getChildren().add(textArea);
 
         for (int i = 0; i < gridSize; i++) {
             for (int j = 0; j < gridSize; j++) {
@@ -59,6 +73,8 @@ public class Ui {
                 pane.getChildren().add(rectangle[i][j]);
             }
         }
+        networkThred.setInput(grid);
+        thread.start();
     }
 
     private void addActions() {
@@ -78,9 +94,13 @@ public class Ui {
             try {
                 rectangle[x][y].setFill(javafx.scene.paint.Color.WHITE);
                 grid[x][y] = 256;
-                thread.start();
-            } catch (Exception _) {
+                if (!thread.isAlive()) {
+                    networkThred.setInput(grid);
+                }
+                text.setText(String.valueOf(networkThred.getOutput()));
 
+            } catch (Exception _) {
+                //mouse is out of bounds, this exception is kinda used instead of if statement to ignore those situations
             }
 
         });
@@ -94,6 +114,11 @@ public class Ui {
                     rectangle[i][j].setFill(Color.BLACK);
                 }
             }
+            if (!thread.isAlive()) {
+                networkThred.setInput(grid);
+                text.setText(String.valueOf(networkThred.getOutput()));
+            }
+
         });
     }
 
