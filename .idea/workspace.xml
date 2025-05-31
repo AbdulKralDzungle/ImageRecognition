@@ -4,30 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/java/main/controol/NetworkTickTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/java/main/network/DataReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/java/main/network/HiddenLeyerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/java/main/network/NetworkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/prometheus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/prostedalsimodel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/takyMoznaNejlepsi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controol/NetworkExit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/java/main/network/NeuronTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/java/main/network/NeuronTest.java" afterDir="false" />
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="java dox and unit texts">
+      <change afterPath="$PROJECT_DIR$/src/ExampleModels/NEJLEPSI" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Ui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkLoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkStop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkTick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/TrainNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/HiddenLeyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/HiddenLeyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/network/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/network/Neuron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +87,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -233,6 +215,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\damia\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="" />
@@ -308,7 +293,7 @@
       <workItem from="1748717065751" duration="436000" />
       <workItem from="1748717512771" duration="499000" />
       <workItem from="1748718021332" duration="837000" />
-      <workItem from="1748718866917" duration="3758000" />
+      <workItem from="1748718866917" duration="7689000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -470,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748701987391</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="java dox and unit texts">
+      <option name="closed" value="true" />
+      <created>1748722757313</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1748722757313</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,6 +498,11 @@
     <MESSAGE value="serializace, dalsi pokus" />
     <MESSAGE value="deserialization" />
     <MESSAGE value="deserialization 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="deserialization 2" />
+    <MESSAGE value="java dox and unit texts" />
+    <option name="LAST_COMMIT_MESSAGE" value="java dox and unit texts" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

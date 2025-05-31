@@ -84,7 +84,7 @@ public class NetworkThred implements Runnable {
         commands.put("load", new NetworkLoad());
         commands.put("save", new SaveNetwork());
         commands.put("stop", new NetworkStop());
-        commands.put("exit", new NetworkStop());
+        commands.put("exit", new NetworkExit());
         command = new NetworkTick();
         //---------------------------------------------------
         try {

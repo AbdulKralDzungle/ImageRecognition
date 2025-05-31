@@ -25,7 +25,7 @@ public class NetworkStop extends Command {
 
     @Override
     public boolean exit() {
-        return true;
+        return false;
     }
 
     @Override
