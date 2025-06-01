@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ImageRecognition:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="java dox and unit texts">
-      <change afterPath="$PROJECT_DIR$/src/ExampleModels/NEJLEPSI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/NetworkThred.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controol/SaveNetwork.java" afterDir="false" />
-    </list>
+    <list default="true" id="2b08d675-f6e5-4c87-bec1-6dc02631742f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +292,7 @@
       <workItem from="1748717065751" duration="436000" />
       <workItem from="1748717512771" duration="499000" />
       <workItem from="1748718021332" duration="837000" />
-      <workItem from="1748718866917" duration="7689000" />
+      <workItem from="1748718866917" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="Ono to funguje&#10;YESSSS">
       <option name="closed" value="true" />
@@ -463,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748722757313</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="java dox and unit texts">
+      <option name="closed" value="true" />
+      <created>1748729020073</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1748729020073</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
